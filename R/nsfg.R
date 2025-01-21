@@ -64,7 +64,7 @@ nsfg <- function(years, survey = FALSE, keep_source = FALSE, progress = TRUE, da
 
     if (year==2011) {
       if (progress) {utils::setTxtProgressBar(pb,year.num)}
-      raw <- readLines(paste0(data_dir,"/2011_2013_FemResp.dat"))
+      raw <- readLines(paste0(data_dir,"/2011_2013_FemRespData.dat"))
       }
 
     if (year==2013) {
