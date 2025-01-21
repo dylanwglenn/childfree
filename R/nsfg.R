@@ -55,37 +55,37 @@ nsfg <- function(years, survey = FALSE, keep_source = FALSE, progress = TRUE, ti
     if (year==2002) {
       if (!RCurl::url.exists("https://ftp.cdc.gov/pub/Health_Statistics/NCHS/Datasets/NSFG/2002FemResp.dat")) {message("You are offline or NSFG data is not available now. Try again later"); data <- NULL; return(data)}
       if (progress) {utils::setTxtProgressBar(pb,year.num)}
-      raw <- readLines("https://ftp.cdc.gov/pub/Health_Statistics/NCHS/Datasets/NSFG/2002FemResp.dat", options(timeout=timeout))
+      raw <- readLines(RCurl::getURL("https://ftp.cdc.gov/pub/Health_Statistics/NCHS/Datasets/NSFG/2002FemResp.dat",connect-timeout = timeout))
       }
 
     if (year==2006) {
       if (!RCurl::url.exists("https://ftp.cdc.gov/pub/Health_Statistics/NCHS/Datasets/NSFG/2006_2010_FemResp.dat")) {message("You are offline or NSFG data is not available now. Try again later"); data <- NULL; return(data)}
       if (progress) {utils::setTxtProgressBar(pb,year.num)}
-      raw <- readLines("https://ftp.cdc.gov/pub/Health_Statistics/NCHS/Datasets/NSFG/2006_2010_FemResp.dat", options(timeout=timeout))
+      raw <- readLines(RCurl::getURL("https://ftp.cdc.gov/pub/Health_Statistics/NCHS/Datasets/NSFG/2006_2010_FemResp.dat",connect-timeout = timeout))
       }
 
     if (year==2011) {
       if (!RCurl::url.exists("https://ftp.cdc.gov/pub/Health_Statistics/NCHS/Datasets/NSFG/2011_2013_FemRespData.dat")) {message("You are offline or NSFG data is not available now. Try again later"); data <- NULL; return(data)}
       if (progress) {utils::setTxtProgressBar(pb,year.num)}
-      raw <- readLines("https://ftp.cdc.gov/pub/Health_Statistics/NCHS/Datasets/NSFG/2011_2013_FemRespData.dat", options(timeout=timeout))
+      raw <- readLines(RCurl::getURL("https://ftp.cdc.gov/pub/Health_Statistics/NCHS/Datasets/NSFG/2011_2013_FemRespData.dat", connect-timeout = timeout))
       }
 
     if (year==2013) {
       if (!RCurl::url.exists("https://ftp.cdc.gov/pub/Health_Statistics/NCHS/Datasets/NSFG/2013_2015_FemRespData.dat")) {message("You are offline or NSFG data is not available now. Try again later"); data <- NULL; return(data)}
       if (progress) {utils::setTxtProgressBar(pb,year.num)}
-      raw <- readLines("https://ftp.cdc.gov/pub/Health_Statistics/NCHS/Datasets/NSFG/2013_2015_FemRespData.dat", options(timeout=timeout))
+      raw <- readLines(RCurl::getURL("https://ftp.cdc.gov/pub/Health_Statistics/NCHS/Datasets/NSFG/2013_2015_FemRespData.dat", connect-timeout = timeout))
       }
 
     if (year==2015) {
       if (!RCurl::url.exists("https://ftp.cdc.gov/pub/Health_Statistics/NCHS/Datasets/NSFG/2015_2017_FemRespData.dat")) {message("You are offline or NSFG data is not available now. Try again later"); data <- NULL; return(data)}
       if (progress) {utils::setTxtProgressBar(pb,year.num)}
-      raw <- readLines("https://ftp.cdc.gov/pub/Health_Statistics/NCHS/Datasets/NSFG/2015_2017_FemRespData.dat", options(timeout=timeout))
+      raw <- readLines(RCurl::getURL("https://ftp.cdc.gov/pub/Health_Statistics/NCHS/Datasets/NSFG/2015_2017_FemRespData.dat", connect-timeout = timeout))
       }
 
     if (year==2017) {
       if (!RCurl::url.exists("https://ftp.cdc.gov/pub/Health_Statistics/NCHS/Datasets/NSFG/2017_2019_FemRespData.dat")) {message("You are offline or NSFG data is not available now. Try again later"); data <- NULL; return(data)}
       if (progress) {utils::setTxtProgressBar(pb,year.num)}
-      raw <- readLines("https://ftp.cdc.gov/pub/Health_Statistics/NCHS/Datasets/NSFG/2017_2019_FemRespData.dat", options(timeout=timeout))
+      raw <- readLines(RCurl::getURL("https://ftp.cdc.gov/pub/Health_Statistics/NCHS/Datasets/NSFG/2017_2019_FemRespData.dat", connect-timeout = timeout))
       }
 
     #Initialize dataframe with id variable
