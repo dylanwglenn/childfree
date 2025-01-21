@@ -55,7 +55,7 @@ nsfg <- function(years, survey = FALSE, keep_source = FALSE, progress = TRUE, ti
     if (year==2002) {
       if (!RCurl::url.exists("https://ftp.cdc.gov/pub/Health_Statistics/NCHS/Datasets/NSFG/2002FemResp.dat")) {message("You are offline or NSFG data is not available now. Try again later"); data <- NULL; return(data)}
       if (progress) {utils::setTxtProgressBar(pb,year.num)}
-      raw <- readLines(RCurl::getURL("https://ftp.cdc.gov/pub/Health_Statistics/NCHS/Datasets/NSFG/2002FemResp.dat",connect-timeout = timeout))
+      raw <- readLines(RCurl::getURL("https://ftp.cdc.gov/pub/Health_Statistics/NCHS/Datasets/NSFG/2002FemResp.dat",connecttimeout = timeout))
       }
 
     if (year==2006) {
